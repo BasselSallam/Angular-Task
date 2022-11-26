@@ -1,0 +1,18 @@
+<div class="mb-5">
+    <app-products [prevDataPassed]="prevNumber" [nextDataPassed]="nextNumber"></app-products>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item ">
+            <a class="page-link" [ngClass]="{'disabled pe-auto':pageNumber == 1}" (click)="prev()">Previous</a>
+        </li>
+        <ng-container *ngFor="let pageNum of [1,2,3,4,5]">
+            <li class="page-item">
+                <a class="page-link pe-auto" (click)="page(pageNum)">{{pageNum}}</a>
+            </li>
+        </ng-container>
+        <li class="page-item">
+            <a class="page-link" [ngClass]="{'disabled pe-auto':pageNumber == 5}" (click)="next()">Next</a>
+        </li>
+    </ul>
+</nav>

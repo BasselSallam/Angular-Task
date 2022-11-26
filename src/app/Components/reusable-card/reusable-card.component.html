@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="imgLink" (click)="viewPrd(dataPassed.id)">
+        <img [src]="dataPassed.thumbnail" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body mt-3">
+        <h5 class="card-title">{{dataPassed.title}}</h5>
+        <p class="card-text">{{dataPassed.description}}</p>
+        <div class="d-flex justify-content-around">
+            <button class="btn btn-primary" (click)="edit(dataPassed.id)">Edit</button>
+            <button class="btn btn-danger" (click)="wipe(dataPassed.id)">Delete</button>
+        </div>
+
+    </div>
+</div>

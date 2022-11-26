@@ -1,0 +1,8 @@
+.tab-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex!important;
+    flex-wrap: wrap;
+    justify-content: center!important;
+    align-content: center!important;
+}

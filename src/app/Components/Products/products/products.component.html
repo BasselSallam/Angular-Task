@@ -1,0 +1,6 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <ng-container *ngFor="let prd of productList[0].slice(prevDataPassed,nextDataPassed);let i=index">
+        <app-reusable-card [dataPassed]='prd'></app-reusable-card>
+    </ng-container>
+
+</div>

@@ -1,0 +1,23 @@
+.card{
+    /* width: 25vw; */
+    height: 27vw;
+}
+.card-img-top{
+    height: 100%;
+}
+p{
+    width:100%;
+    height: 3.5vw;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    background:#fff;
+}
+button{
+    width: 100px;
+}
+.imgLink{
+    height: 50%;
+    cursor: pointer;
+}

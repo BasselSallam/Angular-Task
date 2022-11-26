@@ -1,0 +1,37 @@
+<div class="container mt-5 mb-5">
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-6 border-end">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="main_image"> <img [src]="imgView" id="main_product_image" width="350"> </div>
+                    <div class="thumbnail_images">
+                        <ul id="thumbnail">
+                            <ng-container *ngFor="let img of product.images">
+                                <li><img (click)="changeImage(img)" [src]="img" width="70" height="70"></li>
+                            </ng-container>
+                            <!-- <li><img (click)="changeImage(this)" src="https://i.imgur.com/w6kEctd.jpg" width="70"></li>
+                            <li><img (click)="changeImage(this)" src="https://i.imgur.com/L7hFD8X.jpg" width="70"></li>
+                            <li><img (click)="changeImage(this)" src="https://i.imgur.com/6ZufmNS.jpg" width="70"></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="p-3 right-side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>{{product.title}}</h3> <span class="heart"><i class="bx bx-heart"></i></span>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                        <p>{{product.description}}</p>
+                    </div>
+                    <h3>${{product.price}}</h3>
+                    <div class="ratings d-flex flex-row align-items-center">
+                        <div class="d-flex flex-row"> <i class="bx bxs-star"></i> <i class="bx bxs-star"></i> <i
+                                class="bx bxs-star"></i> <i class="bx bxs-star"></i> <i class="bx bx-star"></i> </div>
+                        <span>{{product.rating}} Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

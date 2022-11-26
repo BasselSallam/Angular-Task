@@ -1,0 +1,42 @@
+<form #thisForm="ngForm" (ngSubmit)="onSubmit(thisForm)">
+    <div class="row container-fluid">
+        <div class="col-6">
+            <div class="mb-3">
+                <label class="form-label">Product Price</label><span style="color:red;">*</span>
+                <input type="number" class="form-control" #price="ngModel" name="price" ngModel required>
+            </div>
+
+
+        </div>
+        <div class='col-6'>
+            <div class="mb-3">
+                <label class="form-label">Product Brand</label><span style="color:red;">*</span>
+                <input type="text" class="form-control" #brand="ngModel" name="brand" ngModel required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product Name</label><span style="color:red;">*</span>
+                <input type="text" class="form-control" #title="ngModel" name="title" ngModel required>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product Discount</label><span style="color:red;">*</span>
+                <input type="number" class="form-control" #discountPercentage="ngModel" name="discountPercentage"
+                    ngModel required>
+
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Product ImageURL</label><span style="color:red;">*</span>
+        <input type="text" class="form-control" #thumbnail="ngModel" name="thumbnail" ngModel required>
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Product Description</label><span style="color:red;">*</span>
+        <input style="height:10rem;" type="text" class="form-control" #description="ngModel" name="description" ngModel
+            required>
+
+    </div>
+    <button type="submit" style="width: 20%;margin-left: 0.7%;" class="btn btn-primary my-5"
+        [disabled]="thisForm.invalid">Add Product</button>
+</form>

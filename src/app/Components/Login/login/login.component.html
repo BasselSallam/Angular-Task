@@ -1,0 +1,20 @@
+<!-- Pills content -->
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+    <form #form="ngForm" (ngSubmit)="Login(form)">
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input ngModel #Email="ngModel" type="email" id="loginName" class="form-control" name="email" />
+        <label class="form-label" for="loginName">Email or username</label>
+      </div>
+
+
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4 w-100">Sign in</button>
+
+    </form>
+  </div>
+  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+  </div>
+  <!-- Pills content -->
